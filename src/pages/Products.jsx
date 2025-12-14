@@ -20,7 +20,7 @@ export default function Products() {
       <ProductCard
         title="Treniņu plāns mājām (8 nedēļas)"
         price="30"
-        image="/images/homegym2.jpg"
+        image="/images/homegym3.jpg"
       />
 
       <ProductCard
