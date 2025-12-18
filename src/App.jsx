@@ -1,6 +1,7 @@
-import Navbar from "./components/Navbar.jsx";
-import Hero from "./components/Hero.jsx";
-import Products from "./pages/Products.jsx";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Products from "./pages/Products";
+import About from "./components/About";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <Hero />
       <Products />
+      <About />
     </>
   );
 }
