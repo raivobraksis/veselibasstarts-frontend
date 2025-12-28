@@ -9,6 +9,7 @@ export default function Products() {
         title="Individuāls uztura plāns"
         price="50"
         image="/images/uzturs.jpg"
+        link="https://buy.stripe.com/eVq6oJ0Dv7KD3nSegq3Nm04"
       />
 
       <ProductCard
