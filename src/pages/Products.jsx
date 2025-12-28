@@ -13,16 +13,16 @@ export default function Products() {
       />
 
       <ProductCard
-        title="Treniņu plāns zālei (8 nedēļas)"
+        title="Treniņu plāns zālei (4 nedēļas)"
         price="30"
         image="/images/trenins.jpg"
         link="https://buy.stripe.com/9B6dRbgCtfd51fK8W63Nm03"
       />
 
       <ProductCard
-        title="Treniņu plāns mājām (8 nedēļas)"
+        title="Treniņu plāns mājām (4 nedēļas)"
         price="30"
-        image="/images/homegym3.jpg"
+        image="/images/homegym4.jpg.jpg"
         link="https://buy.stripe.com/3cIaEZ1Hzd4XcYsc8i3Nm01"
       />
 
