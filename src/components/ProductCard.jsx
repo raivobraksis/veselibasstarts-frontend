@@ -1,4 +1,4 @@
-export default function ProductCard({ title, price, image }) {
+export default function ProductCard({ title, price, image, link }) {
   return (
     <div
       style={{
@@ -22,25 +22,34 @@ export default function ProductCard({ title, price, image }) {
         boxShadow: "0 20px 40px rgba(0,0,0,0.5)"
       }}
     >
-      <h3 style={{ marginBottom: "10px" }}>{title}</h3>
+      <h3 style={{ marginBottom: "10px", fontSize: "22px" }}>
+        {title}
+      </h3>
 
       <p style={{ fontSize: "18px", marginBottom: "20px" }}>
         {price} EUR
       </p>
 
-      <button
-        style={{
-          background: "#ffffff",
-          color: "#000000",
-          border: "none",
-          padding: "12px 26px",
-          borderRadius: "30px",
-          fontWeight: "bold",
-          cursor: "pointer"
-        }}
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ textDecoration: "none" }}
       >
-        Pirkt
-      </button>
+        <button
+          style={{
+            background: "#ffffff",
+            color: "#000000",
+            border: "none",
+            padding: "12px 26px",
+            borderRadius: "30px",
+            fontWeight: "bold",
+            cursor: "pointer"
+          }}
+        >
+          Pirkt
+        </button>
+      </a>
     </div>
   );
 }
