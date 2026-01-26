@@ -1,15 +1,19 @@
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import CookieBanner from "./components/CookieBanner";
 import Products from "./pages/Products";
-import About from "./components/About";
 
-function App() {
+export default function App() {
   return (
-    <>
+    <div
+      style={{
+        minHeight: "100vh",
+        backgroundColor: "#000000",
+        fontFamily: "Arial, sans-serif"
+      }}
+    >
       <Navbar />
-      <Hero />
       <Products />
-      <About />
-    </>
+      <CookieBanner />
+    </div>
   );
 }
