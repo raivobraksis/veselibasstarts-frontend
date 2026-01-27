@@ -41,7 +41,7 @@ export default function Products() {
         </h2>
 
         <p>
-          Veselības Starts ir zīmols, kas rada praktiskus produktus ikdienai - 
+          Veselības Starts ir zīmols, kas rada praktiskus produktus ikdienai -
           ērtus, funkcionālus un piemērotus aktīvam dzīvesveidam.
           Mūsu mērķis ir palīdzēt cilvēkiem rūpēties par sevi vienkāršā
           un ilgtspējīgā veidā.
