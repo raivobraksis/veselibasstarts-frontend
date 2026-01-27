@@ -1,14 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function CookieBanner() {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const accepted = localStorage.getItem("cookiesAccepted");
-    if (!accepted) {
-      setVisible(true);
-    }
-  }, []);
+  const [visible, setVisible] = useState(
+    !localStorage.getItem("cookiesAccepted")
+  );
 
   const acceptCookies = () => {
     localStorage.setItem("cookiesAccepted", "true");
@@ -22,21 +17,20 @@ export default function CookieBanner() {
       style={{
         position: "fixed",
         bottom: 0,
-        left: 0,
         width: "100%",
-        background: "#000",
+        background: "#111",
         color: "#fff",
-        padding: "15px 20px",
+        padding: "20px",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        zIndex: 9999
+        zIndex: 1000
       }}
     >
-      <span style={{ fontSize: "14px" }}>
-        Mēs izmantojam sīkdatnes (cookies), lai nodrošinātu
-        mājaslapas darbību un maksājumu apstrādi.
-      </span>
+      <p style={{ margin: 0, fontSize: "14px" }}>
+        Šī vietne izmanto sīkdatnes, lai nodrošinātu tās darbību un uzlabotu
+        lietošanas pieredzi.
+      </p>
 
       <button
         onClick={acceptCookies}
@@ -44,7 +38,7 @@ export default function CookieBanner() {
           background: "#fff",
           color: "#000",
           border: "none",
-          padding: "8px 16px",
+          padding: "8px 20px",
           borderRadius: "20px",
           cursor: "pointer",
           fontWeight: "bold"
