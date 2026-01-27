@@ -2,46 +2,31 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: "#000000",
-        color: "#cccccc",
+        borderTop: "1px solid #222",
         padding: "40px 20px",
-        marginTop: "80px",
-        borderTop: "1px solid #222"
+        textAlign: "center",
+        fontSize: "14px",
+        opacity: 0.85
       }}
     >
-      <div
-        style={{
-          maxWidth: "1000px",
-          margin: "0 auto",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "15px",
-          textAlign: "center"
-        }}
-      >
-        <p style={{ fontSize: "14px" }}>
-          © {new Date().getFullYear()} Veselības Starts
+      <p>© {new Date().getFullYear()} Veselības Starts</p>
+
+      <p style={{ marginTop: "10px" }}>
+        Pašnodarbināta persona. Digitālas dāvanas tiek nosūtītas elektroniski pēc apmaksas.
+      </p>
+
+      <div style={{ marginTop: "15px" }}>
+        <p>
+          <strong>Privātuma politika</strong><br />
+          Mēs apstrādājam tikai pasūtījuma izpildei nepieciešamos datus
+          (vārds, e-pasts, piegādes adrese). Maksājumi tiek apstrādāti ar Stripe.
         </p>
 
-        <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-          <a
-            href="/privacy"
-            style={{ color: "#ffffff", textDecoration: "none" }}
-          >
-            Privātuma politika
-          </a>
-
-          <a
-            href="/terms"
-            style={{ color: "#ffffff", textDecoration: "none" }}
-          >
-            Lietošanas noteikumi & atteikuma tiesības
-          </a>
-        </div>
-
-        <p style={{ fontSize: "12px", opacity: 0.7 }}>
-          Digitālās dāvanas tiek nosūtītas elektroniski pēc apmaksas.
+        <p style={{ marginTop: "10px" }}>
+          <strong>Atteikuma tiesības</strong><br />
+          Fiziskām precēm atteikums iespējams 14 dienu laikā.
+          Digitālajam saturam (receptes) – saskaņā ar ES noteikumiem atteikuma
+          tiesības neattiecas pēc piegādes uzsākšanas.
         </p>
       </div>
     </footer>
