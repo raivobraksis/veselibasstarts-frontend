@@ -1,14 +1,11 @@
 import Navbar from "./components/Navbar";
 import Products from "./pages/Products";
-import About from "./About";
 
 export default function App() {
   return (
-    <div>
+    <div style={{ backgroundColor: "#000", minHeight: "100vh" }}>
       <Navbar />
       <Products />
-      <About />
-      <Footer />
     </div>
   );
 }

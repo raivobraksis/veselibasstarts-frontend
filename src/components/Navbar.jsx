@@ -1,15 +1,17 @@
 export default function Navbar() {
   return (
-    <nav
+    <div
       style={{
-        background: "#000",
+        backgroundColor: "#111",
         color: "#fff",
         padding: "20px",
-        borderBottom: "1px solid #222",
-        textAlign: "center"
+        textAlign: "center",
+        borderBottom: "1px solid #333"
       }}
     >
-      <h2 style={{ margin: 0 }}>Veselības Starts</h2>
-    </nav>
+      <h1 style={{ margin: 0, fontSize: "24px" }}>
+        Veselības Starts
+      </h1>
+    </div>
   );
 }
