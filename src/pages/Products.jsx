@@ -17,7 +17,7 @@ export default function Products() {
         </h1>
 
         <p style={{ color: "#cccccc", maxWidth: "600px", margin: "0 auto" }}>
-          Praktiski risinājumi ērtai un veselīgai ikdienai.
+          Praktiski risinājumi ērtai un veselīgai ikdienai
         </p>
       </div>
 

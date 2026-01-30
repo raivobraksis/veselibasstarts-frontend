@@ -21,11 +21,11 @@ export default function About() {
 
         <p style={{ fontSize: "18px", marginBottom: "20px" }}>
           <strong>Veselības Starts</strong> ir radīts, lai palīdzētu cilvēkiem
-          padarīt ikdienas ēšanu ērtāku, veselīgāku un pārdomātāku.
+          padarīt ikdienu ērtāku, aktīvāku, veselīgāku un pārdomātāku.
         </p>
 
         <p style={{ fontSize: "18px", marginBottom: "20px" }}>
-          Mēs piedāvājam praktiskas, saliekamas 3 ēdienu kastītes, kuras ir
+          Mēs piedāvājam praktiskas, 3-daļīgas kastītes, kuras ir
           ērti paņemt līdzi uz darbu, izbraucienos vai ikdienas gaitās.
         </p>
 
@@ -35,7 +35,7 @@ export default function About() {
         </p>
 
         <p style={{ fontSize: "18px" }}>
-          Mūsu mērķis ir vienkārši risinājumi cilvēkiem ar aktīvu dzīvesveidu.
+          Mūsu mērķis ir vienkārši risinājumi cilvēkiem ar aktīvu un aizņemtu dzīvesveidu.
         </p>
       </div>
     </div>
