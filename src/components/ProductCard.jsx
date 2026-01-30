@@ -24,7 +24,7 @@ export default function ProductCard() {
       {/* Saturs */}
       <div style={{ padding: "40px" }}>
         <h2 style={{ fontSize: "28px", marginBottom: "10px" }}>
-          3-daļīgs saliekamo kastīšu komplekts
+          3-daļīgs kastīšu komplekts
         </h2>
 
         <p style={{ opacity: 0.9, marginBottom: "20px" }}>
