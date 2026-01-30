@@ -35,8 +35,8 @@ export default function ProductCard() {
 
         <h4>Komplektā ietilpst:</h4>
         <ul style={{ lineHeight: "1.8" }}>
-          <li>🥗 3 apvienojamas ēdienu kastītes</li>
-          <li>📘 Digitālās receptes dāvanā (10 gb.)</li>
+        <li>🥗 3 apvienojamas ēdienu kastītes</li>
+        <li>📘 Digitālās receptes dāvanā (10 gb.)</li>
         </ul>
 
         <p style={{ marginTop: "15px", fontSize: "14px", opacity: 0.85 }}>
