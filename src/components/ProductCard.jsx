@@ -24,30 +24,31 @@ export default function ProductCard() {
       {/* Saturs */}
       <div style={{ padding: "40px" }}>
         <h2 style={{ fontSize: "28px", marginBottom: "10px" }}>
-          3 ēdienu saliekamo kastīšu komplekts
+          3-daļīgs saliekamo kastīšu komplekts
         </h2>
 
         <p style={{ opacity: 0.9, marginBottom: "20px" }}>
           Praktiskas, vieglas un kompaktas ēdienu kastītes,
-          kuras lieliski piemērotas līdzi ņemšanai uz darbu,
+          kuras lieliski piemērotas uzglabāšanai, līdzņemšanai uz darbu,
           izbraucieniem un aktīvai ikdienai.
         </p>
 
         <h4>Komplektā ietilpst:</h4>
         <ul style={{ lineHeight: "1.8" }}>
-          <li>🥗 3 saliekamas ēdienu kastītes</li>
-          <li>📘 Digitāla recepšu grāmata dāvanā</li>
+          <li>🥗 3 apvienojamas ēdienu kastītes</li>
+          <li>📘 Digitālās receptes dāvanā (10 gb.)</li>
         </ul>
 
         <p style={{ marginTop: "15px", fontSize: "14px", opacity: 0.85 }}>
-          Digitālā recepšu grāmata tiks nosūtīta uz jūsu e-pastu
+          Digitālās receptes tiks nosūtītas uz jūsu e-pastu
           pēc veiksmīgas apmaksas.
         </p>
 
         <h3 style={{ marginTop: "20px" }}>Cena: 30 EUR</h3>
 
         <p style={{ fontSize: "14px", opacity: 0.8 }}>
-          Piegādes veids un adrese tiek izvēlēti nākamajā solī.
+          Piegādes veids un adrese tiek izvēlēti nākamajā solī. Adreses lodziņā norādīt
+          vēlamā pakomāta adresi.
         </p>
 
         <a
