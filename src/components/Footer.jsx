@@ -22,7 +22,7 @@ export default function Footer() {
       <p style={{ lineHeight: "1.6" }}>
         <strong>Privātuma politika:</strong><br />
         Tiek apstrādāti tikai pasūtījuma izpildei nepieciešamie dati
-        (vārds, e-pasts, piegādes adrese, telefona nr.). Maksājumus apstrādā Stripe.
+        (vārds, uzvārds, e-pasts, piegādes adrese, telefona nr.). Maksājumus apstrādā Stripe.
       </p>
 
       <p style={{ lineHeight: "1.6", marginTop: "10px" }}>
