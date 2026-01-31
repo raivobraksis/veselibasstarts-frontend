@@ -44,7 +44,7 @@ export default function ProductCard() {
           pēc veiksmīgas apmaksas.
         </p>
 
-        <h3 style={{ marginTop: "20px" }}>Cena: 30 EUR</h3>
+        <h3 style={{ marginTop: "20px" }}>Cena: 30 EUR (piegāde bez maksas)</h3>
 
         <p style={{ fontSize: "14px", opacity: 0.8 }}>
           Piegādes veids un adrese tiek izvēlēti nākamajā solī. Adreses lodziņā norādīt
