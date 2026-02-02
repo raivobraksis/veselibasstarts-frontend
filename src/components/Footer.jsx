@@ -18,7 +18,7 @@ const Footer = () => {
             Vārds, uzvārds: Raivo Brakšis<br />
             Statuss: Pašnodarbināta persona (Latvija)<br />
             E-pasts: <a href="mailto:raivo.braksis@gmail.com" style={styles.link}>
-              raivo.braksis@gmail.com
+              veselibasstarts@gmail.com
             </a>
           </p>
         </div>
