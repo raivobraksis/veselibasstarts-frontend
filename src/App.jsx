@@ -1,16 +1,17 @@
 import Navbar from "./components/Navbar";
 import Products from "./pages/Products";
-import About from "./pages/about";
+import About from "./pages/About";
 import Footer from "./components/Footer";
 
-export default function App() {
+function App() {
   return (
-    <div style={{ backgroundColor: "#000", minHeight: "100vh" }}>
+    <>
       <Navbar />
       <Products />
       <About />
       <Footer />
-      <ProductCard />
-    </div>
+    </>
   );
 }
+
+export default App;
