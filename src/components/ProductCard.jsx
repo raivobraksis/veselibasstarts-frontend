@@ -3,7 +3,7 @@ import { useState } from "react";
 /* ====== IMPORTĒ BILDES ====== */
 
 /* Kastītes */
-import kastites1 from "../images/kastites.jpg.jpeg";
+import kastites1 from "../images/kastites1.jpg.jpeg";
 
 /* Termokrūze melna */
 import melna1 from "../images/termokruze-melna1.jpg.jpeg";
