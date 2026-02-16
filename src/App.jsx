@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Products from "./pages/Products";
 import About from "./pages/about";
 import Footer from "./components/Footer";
+import ProductCard from "./components/ProductCard";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <Products />
       <About />
       <Footer />
+      <ProductCard />
     </div>
   );
 }
