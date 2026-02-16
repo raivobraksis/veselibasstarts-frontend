@@ -1,43 +1,85 @@
 import { useState } from "react";
 
-import kastitesImg from "../assets/kastites.jpg";
-import melnaImg from "../assets/termokruze-melna.jpg";
-import besaImg from "../assets/termokruze-besa.jpg";
+/* ====== IMPORTĒ BILDES ====== */
 
-const Products = () => {
+/* Kastītes */
+import kastites1 from "../images/kastites1.jpg";
+import kastites2 from "../images/kastites2.jpg";
+
+/* Termokrūze melna */
+import melna1 from "../images/termokruze-melna1.jpg";
+import melna2 from "../images/termokruze-melna2.jpg";
+
+/* Termokrūze bēša */
+import besa1 from "../images/termokruze-besa1.jpg";
+import besa2 from "../images/termokruze-besa2.jpg";
+
+const ProductCard = () => {
   const [selectedColor, setSelectedColor] = useState("melna");
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const stripeLinks = {
-    kastites: "IEVIETO_KASTĪŠU_STRIPE_LINKU",
-    melna: "IEVIETO_MELNĀS_TERMO_LINKU",
-    besa: "IEVIETO_BĒŠĀS_TERMO_LINKU"
+  const products = {
+    kastites: {
+      title: "3-daļīgs kastīšu komplekts",
+      price: "30 EUR",
+      images: [kastites1, kastites2],
+      stripe: "IEVIETO_KASTĪŠU_STRIPE_LINKU"
+    },
+    melna: {
+      title: "Ūdens termokrūze - Melna",
+      price: "19 EUR",
+      images: [melna1, melna2],
+      stripe: "IEVIETO_MELNĀS_TERMO_LINKU"
+    },
+    besa: {
+      title: "Ūdens termokrūze - Bēša",
+      price: "19 EUR",
+      images: [besa1, besa2],
+      stripe: "IEVIETO_BĒŠĀS_TERMO_LINKU"
+    }
   };
 
-  const currentImage = selectedColor === "melna" ? melnaImg : besaImg;
+  const currentProduct = selectedColor === "kastites"
+    ? products.kastites
+    : products[selectedColor];
+
+  const images = currentProduct.images;
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) =>
+      prev === images.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) =>
+      prev === 0 ? images.length - 1 : prev - 1
+    );
+  };
 
   return (
     <section style={styles.section}>
 
-      {/* KASTĪTES */}
+      {/* ====== KASTĪTES ====== */}
       <div style={styles.card}>
-        <img src={kastitesImg} alt="3-daļīgas ēdienu kastītes" style={styles.image} />
+        <img
+          src={products.kastites.images[currentImageIndex % products.kastites.images.length]}
+          alt="Kastītes"
+          style={styles.image}
+        />
 
-        <h2>3-daļīgs kastīšu komplekts</h2>
+        <div style={styles.imageButtons}>
+          <button onClick={prevImage}>‹</button>
+          <button onClick={nextImage}>›</button>
+        </div>
 
-        <p>
-          Praktiskas, vieglas un kompaktas ēdienu kastītes,
-          piemērotas uzglabāšanai un līdzi ņemšanai.
-        </p>
-
-        <ul>
-          <li>3 apvienojamas ēdienu kastītes</li>
-          <li>Digitālās receptes dāvanā (PDF)</li>
-        </ul>
-
-        <p style={styles.price}>Cena: 30 EUR</p>
+        <h2>{products.kastites.title}</h2>
+        <p>Praktiskas, vieglas un kompaktas ēdienu kastītes.</p>
+        <p><strong>Dāvanā:</strong> Digitālās receptes PDF formātā</p>
+        <p style={styles.price}>{products.kastites.price}</p>
 
         <a
-          href={stripeLinks.kastites}
+          href={products.kastites.stripe}
           target="_blank"
           rel="noopener noreferrer"
           style={styles.button}
@@ -47,18 +89,25 @@ const Products = () => {
       </div>
 
 
-      {/* TERMO KRŪZE */}
+      {/* ====== TERMO KRŪZE ====== */}
       <div style={styles.card}>
-        <img src={currentImage} alt="Ūdens termokrūze" style={styles.image} />
+        <img
+          src={images[currentImageIndex % images.length]}
+          alt="Termokrūze"
+          style={styles.image}
+        />
+
+        <div style={styles.imageButtons}>
+          <button onClick={prevImage}>‹</button>
+          <button onClick={nextImage}>›</button>
+        </div>
 
         <h2>Ūdens termokrūze</h2>
 
         <p>
-          Kvalitatīva nerūsējošā tērauda termokrūze,
-          kas uztur dzēriena temperatūru vairākas stundas.
+          Nerūsējošā tērauda termokrūze,
+          kas ilgstoši saglabā dzēriena temperatūru.
         </p>
-
-        <p><strong>Izvēlies krāsu:</strong></p>
 
         <div style={styles.colorWrapper}>
           <button
@@ -68,7 +117,10 @@ const Products = () => {
               color: "#fff",
               border: selectedColor === "melna" ? "3px solid #fff" : "1px solid #555"
             }}
-            onClick={() => setSelectedColor("melna")}
+            onClick={() => {
+              setSelectedColor("melna");
+              setCurrentImageIndex(0);
+            }}
           >
             Melna
           </button>
@@ -80,16 +132,19 @@ const Products = () => {
               color: "#000",
               border: selectedColor === "besa" ? "3px solid #fff" : "1px solid #555"
             }}
-            onClick={() => setSelectedColor("besa")}
+            onClick={() => {
+              setSelectedColor("besa");
+              setCurrentImageIndex(0);
+            }}
           >
             Bēša
           </button>
         </div>
 
-        <p style={styles.price}>Cena: 19 EUR</p>
+        <p style={styles.price}>{currentProduct.price}</p>
 
         <a
-          href={stripeLinks[selectedColor]}
+          href={currentProduct.stripe}
           target="_blank"
           rel="noopener noreferrer"
           style={styles.button}
@@ -121,10 +176,14 @@ const styles = {
   },
   image: {
     width: "100%",
-    height: "280px",
+    height: "300px",
     objectFit: "cover",
-    borderRadius: "10px",
-    marginBottom: "15px"
+    borderRadius: "10px"
+  },
+  imageButtons: {
+    display: "flex",
+    justifyContent: "space-between",
+    marginTop: "5px"
   },
   price: {
     fontSize: "20px",
@@ -144,7 +203,7 @@ const styles = {
   colorWrapper: {
     display: "flex",
     gap: "10px",
-    marginTop: "10px"
+    marginTop: "15px"
   },
   colorButton: {
     padding: "10px 15px",
@@ -154,4 +213,4 @@ const styles = {
   }
 };
 
-export default Products;
+export default ProductCard;
