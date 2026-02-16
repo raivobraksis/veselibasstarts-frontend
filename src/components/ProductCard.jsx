@@ -1,78 +1,157 @@
-export default function ProductCard() {
+import { useState } from "react";
+
+import kastitesImg from "../assets/kastites.jpg";
+import melnaImg from "../assets/termokruze-melna.jpg";
+import besaImg from "../assets/termokruze-besa.jpg";
+
+const Products = () => {
+  const [selectedColor, setSelectedColor] = useState("melna");
+
+  const stripeLinks = {
+    kastites: "IEVIETO_KASTĪŠU_STRIPE_LINKU",
+    melna: "IEVIETO_MELNĀS_TERMO_LINKU",
+    besa: "IEVIETO_BĒŠĀS_TERMO_LINKU"
+  };
+
+  const currentImage = selectedColor === "melna" ? melnaImg : besaImg;
+
   return (
-    <div
-      style={{
-        maxWidth: "900px",
-        margin: "0 auto",
-        background: "#111",
-        color: "#ffffff",
-        borderRadius: "20px",
-        overflow: "hidden",
-        boxShadow: "0 20px 60px rgba(0,0,0,0.6)"
-      }}
-    >
-      {/* Produkta attēls */}
-      <div
-        style={{
-          backgroundImage: "url(/images/kastites.jpg.jpeg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "360px"
-        }}
-      />
+    <section style={styles.section}>
 
-      {/* Saturs */}
-      <div style={{ padding: "40px" }}>
-        <h2 style={{ fontSize: "28px", marginBottom: "10px" }}>
-          3-daļīgs kastīšu komplekts
-        </h2>
+      {/* KASTĪTES */}
+      <div style={styles.card}>
+        <img src={kastitesImg} alt="3-daļīgas ēdienu kastītes" style={styles.image} />
 
-        <p style={{ opacity: 0.9, marginBottom: "20px" }}>
+        <h2>3-daļīgs kastīšu komplekts</h2>
+
+        <p>
           Praktiskas, vieglas un kompaktas ēdienu kastītes,
-          kuras lieliski piemērotas uzglabāšanai, līdzņemšanai uz darbu,
-          izbraucieniem un aktīvai ikdienai.
+          piemērotas uzglabāšanai un līdzi ņemšanai.
         </p>
 
-        <h4>Komplektā ietilpst:</h4>
-        <ul style={{ lineHeight: "1.8" }}>
-        <li>🥗 3 apvienojamas ēdienu kastītes</li>
-        <li>📘 Digitālās receptes dāvanā(10 gb)</li>
+        <ul>
+          <li>3 apvienojamas ēdienu kastītes</li>
+          <li>Digitālās receptes dāvanā (PDF)</li>
         </ul>
 
-        <p style={{ marginTop: "15px", fontSize: "14px", opacity: 0.85 }}>
-          Digitālās receptes tiks nosūtītas uz jūsu e-pastu
-          pēc veiksmīgas apmaksas.
-        </p>
-
-        <h3 style={{ marginTop: "20px" }}>Cena: 30 EUR (piegāde bez maksas)</h3>
-
-        <p style={{ fontSize: "14px", opacity: 0.8 }}>
-          Piegādes veids un adrese tiek izvēlēti nākamajā solī. Adreses lodziņā norādīt
-          vēlamā pakomāta adresi.
-        </p>
+        <p style={styles.price}>Cena: 30 EUR</p>
 
         <a
-          href="https://buy.stripe.com/00w4gBae51mf7E80pA3Nm06"
+          href={stripeLinks.kastites}
           target="_blank"
           rel="noopener noreferrer"
+          style={styles.button}
         >
-          <button
-            style={{
-              marginTop: "30px",
-              background: "#ffffff",
-              color: "#000000",
-              border: "none",
-              padding: "14px 34px",
-              borderRadius: "40px",
-              fontWeight: "bold",
-              fontSize: "16px",
-              cursor: "pointer"
-            }}
-          >
-            Turpināt uz apmaksu
-          </button>
+          Turpināt uz apmaksu
         </a>
       </div>
-    </div>
+
+
+      {/* TERMO KRŪZE */}
+      <div style={styles.card}>
+        <img src={currentImage} alt="Ūdens termokrūze" style={styles.image} />
+
+        <h2>Ūdens termokrūze</h2>
+
+        <p>
+          Kvalitatīva nerūsējošā tērauda termokrūze,
+          kas uztur dzēriena temperatūru vairākas stundas.
+        </p>
+
+        <p><strong>Izvēlies krāsu:</strong></p>
+
+        <div style={styles.colorWrapper}>
+          <button
+            style={{
+              ...styles.colorButton,
+              background: "#000",
+              color: "#fff",
+              border: selectedColor === "melna" ? "3px solid #fff" : "1px solid #555"
+            }}
+            onClick={() => setSelectedColor("melna")}
+          >
+            Melna
+          </button>
+
+          <button
+            style={{
+              ...styles.colorButton,
+              background: "#d8c3a5",
+              color: "#000",
+              border: selectedColor === "besa" ? "3px solid #fff" : "1px solid #555"
+            }}
+            onClick={() => setSelectedColor("besa")}
+          >
+            Bēša
+          </button>
+        </div>
+
+        <p style={styles.price}>Cena: 19 EUR</p>
+
+        <a
+          href={stripeLinks[selectedColor]}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={styles.button}
+        >
+          Turpināt uz apmaksu
+        </a>
+      </div>
+
+    </section>
   );
-}
+};
+
+const styles = {
+  section: {
+    padding: "60px 20px",
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    gap: "40px",
+    background: "#000"
+  },
+  card: {
+    background: "#111",
+    color: "#fff",
+    padding: "25px",
+    borderRadius: "12px",
+    maxWidth: "420px",
+    width: "100%"
+  },
+  image: {
+    width: "100%",
+    height: "280px",
+    objectFit: "cover",
+    borderRadius: "10px",
+    marginBottom: "15px"
+  },
+  price: {
+    fontSize: "20px",
+    marginTop: "15px",
+    fontWeight: "bold"
+  },
+  button: {
+    display: "inline-block",
+    marginTop: "20px",
+    padding: "12px 20px",
+    background: "#fff",
+    color: "#000",
+    textDecoration: "none",
+    borderRadius: "30px",
+    fontWeight: "bold"
+  },
+  colorWrapper: {
+    display: "flex",
+    gap: "10px",
+    marginTop: "10px"
+  },
+  colorButton: {
+    padding: "10px 15px",
+    borderRadius: "20px",
+    cursor: "pointer",
+    fontWeight: "bold"
+  }
+};
+
+export default Products;
