@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import Products from "./pages/Products";
-import about from "./pages/About";
+import About from "./pages/About";
 import Footer from "./components/Footer";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <>
       <Navbar />
       <Products />
-      <about />
+      <About />
       <Footer />
     </>
   );
