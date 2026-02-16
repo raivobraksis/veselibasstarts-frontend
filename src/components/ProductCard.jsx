@@ -12,9 +12,9 @@ const ProductCard = () => {
   ];
 
   const stripeLinks = {
-    kastites: "IEVIETO_KASTĪŠU_STRIPE_LINKU",
-    melna: "IEVIETO_MELNĀS_TERMO_LINKU",
-    besa: "IEVIETO_BĒŠĀS_TERMO_LINKU"
+    kastites: "https://buy.stripe.com/00w4gBae51mf7E80pA3Nm06",
+    melna: "https://buy.stripe.com/dRm28tcmd5Cv4rW8W63Nm08",
+    besa: "https://buy.stripe.com/3cI3cx3PH0ib5w06NY3Nm07"
   };
 
   const nextImage = () => {
@@ -111,7 +111,7 @@ const ProductCard = () => {
           </button>
         </div>
 
-        <p style={styles.price}>Cena: 19 EUR</p>
+        <p style={styles.price}>Cena: 25 EUR</p>
 
         <a
           href={stripeLinks[selectedColor]}

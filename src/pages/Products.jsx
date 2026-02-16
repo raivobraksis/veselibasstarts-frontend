@@ -13,7 +13,7 @@ export default function Products() {
       {/* Virsraksts */}
       <div style={{ textAlign: "center", marginBottom: "60px" }}>
         <h1 style={{ color: "#ffffff", fontSize: "36px", marginBottom: "10px" }}>
-          Mūsu produkts
+          Mūsu produkti
         </h1>
 
         <p style={{ color: "#cccccc", maxWidth: "600px", margin: "0 auto" }}>
