@@ -2,7 +2,6 @@ import Navbar from "./components/Navbar";
 import Products from "./pages/Products";
 import About from "./pages/About";
 import Footer from "./components/Footer";
-import ProductCard from "./components/ProductCard";
 
 function App() {
   return (
@@ -11,7 +10,6 @@ function App() {
       <Products />
       <About />
       <Footer />
-      <ProductCard />
     </>
   );
 }
