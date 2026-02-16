@@ -3,14 +3,14 @@ import { useState } from "react";
 /* ====== IMPORTĒ BILDES ====== */
 
 /* Kastītes */
-import kastites1 from "../images/kastites1.jpg.jpeg";
+import kastites1 from "../images/kastites1.jpeg";
 
 /* Termokrūze melna */
-import melna1 from "../images/termokruze-melna1.jpg.jpeg";
+import melna1 from "../images/termokruze-melna1.jpeg";
 
 /* Termokrūze bēša */
-import besa1 from "../images/termokruze-besa1.jpg.jpeg";
-import besa2 from "../images/termokruze-besa2.jpg.jpeg";
+import besa1 from "../images/termokruze-besa1.jpeg";
+import besa2 from "../images/termokruze-besa2.jpeg";
 
 const ProductCard = () => {
   const [selectedColor, setSelectedColor] = useState("melna");
