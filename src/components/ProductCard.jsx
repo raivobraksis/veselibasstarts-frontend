@@ -3,16 +3,14 @@ import { useState } from "react";
 /* ====== IMPORTĒ BILDES ====== */
 
 /* Kastītes */
-import kastites1 from "../images/kastites1.jpg";
-import kastites2 from "../images/kastites2.jpg";
+import kastites1 from "../images/kastites.jpg.jpeg";
 
 /* Termokrūze melna */
-import melna1 from "../images/termokruze-melna1.jpg";
-import melna2 from "../images/termokruze-melna2.jpg";
+import melna1 from "../images/termokruze-melna1.jpg.jpeg";
 
 /* Termokrūze bēša */
-import besa1 from "../images/termokruze-besa1.jpg";
-import besa2 from "../images/termokruze-besa2.jpg";
+import besa1 from "../images/termokruze-besa1.jpg.jpeg";
+import besa2 from "../images/termokruze-besa2.jpg.jpeg";
 
 const ProductCard = () => {
   const [selectedColor, setSelectedColor] = useState("melna");
@@ -22,13 +20,13 @@ const ProductCard = () => {
     kastites: {
       title: "3-daļīgs kastīšu komplekts",
       price: "30 EUR",
-      images: [kastites1, kastites2],
+      images: [kastites1],
       stripe: "IEVIETO_KASTĪŠU_STRIPE_LINKU"
     },
     melna: {
       title: "Ūdens termokrūze - Melna",
       price: "19 EUR",
-      images: [melna1, melna2],
+      images: [melna1],
       stripe: "IEVIETO_MELNĀS_TERMO_LINKU"
     },
     besa: {
