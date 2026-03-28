@@ -12,7 +12,7 @@ const ProductCard = () => {
   ];
 
   const stripeLinks = {
-    kastites: "https://buy.stripe.com/00w4gBae51mf7E80pA3Nm06",
+    kastites: "https://buy.stripe.com/fZudRb1Hz5Cvf6Ac8i3Nm09",
     melna: "https://buy.stripe.com/dRm28tcmd5Cv4rW8W63Nm08",
     besa: "https://buy.stripe.com/3cI3cx3PH0ib5w06NY3Nm07"
   };
@@ -48,7 +48,7 @@ const ProductCard = () => {
 
         <p><strong>Dāvanā:</strong> Digitālās receptes PDF formātā</p>
 
-        <p style={styles.price}>Cena: 30 EUR</p>
+        <p style={styles.price}>Cena: 24,99 EUR</p>
 
         <a
           href={stripeLinks.kastites}
@@ -111,7 +111,7 @@ const ProductCard = () => {
           </button>
         </div>
 
-        <p style={styles.price}>Cena: 25 EUR</p>
+        <p style={styles.price}>Cena: 19,99 EUR</p>
 
         <a
           href={stripeLinks[selectedColor]}
