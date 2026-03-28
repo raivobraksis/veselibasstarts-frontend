@@ -14,7 +14,7 @@ const ProductCard = () => {
   const stripeLinks = {
     kastites: "https://buy.stripe.com/fZudRb1Hz5Cvf6Ac8i3Nm09",
     melna: "https://buy.stripe.com/5kQ8wR2LD0ibgaE7S23Nm0a",
-    besa: "https://buy.stripe.com/3cI3cx3PH0ib5w06NY3Nm07"
+    besa: "https://buy.stripe.com/14AaEZ9a14yr9Mggoy3Nm0b"
   };
 
   const nextImage = () => {
